@@ -1,9 +1,17 @@
 package org.example;
+import io.quickchart.QuickChart;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class SwingWindow extends JFrame implements ActionListener {
+    GraphPanel graphPanel;
     SwingControlPanel controlPanel;
     SwingUserStatisticsPanel userStatisticsPanel;
     LastTenMessagesPanel lastTenMessagesPanel;
@@ -34,6 +42,8 @@ public class SwingWindow extends JFrame implements ActionListener {
         this.add(lastTenMessagesPanel);
         this.userStatisticsPanel = new SwingUserStatisticsPanel();
         this.add(userStatisticsPanel);
+        this.graphPanel = new GraphPanel();
+        this.add(graphPanel);
         this.setLayout(null);
         this.setSize(800,600);
         this.setVisible(true);
@@ -45,5 +55,6 @@ public class SwingWindow extends JFrame implements ActionListener {
         controlPanel.setVisible(e.getSource() == controlPanelButton);
         userStatisticsPanel.setVisible(e.getSource() == statisticPanelButton);
         lastTenMessagesPanel.setVisible(e.getSource() == actionHistoryButton);
+        graphPanel.setVisible(e.getSource() == userGraphButton);
     }
 }

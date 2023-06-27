@@ -1,4 +1,6 @@
 package org.example;
+import io.quickchart.QuickChart;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

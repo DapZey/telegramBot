@@ -115,6 +115,8 @@ public class MyBot extends TelegramLongPollingBot {
         } else if (level == 1) {
             String message = update.getCallbackQuery().getData();
             if (Objects.equals(message, "cat")) {
+                swingWindow.graphPanel.setCatCount(swingWindow.graphPanel.getCatCount() + 1);
+                swingWindow.graphPanel.setChartConfig();
                 catAPIRun();
                 updateAPIRequestCounter();
                 sleep();
@@ -123,6 +125,8 @@ public class MyBot extends TelegramLongPollingBot {
                 this.userIDLevelHashMap.put(chatID, 0);
             }
             if (Objects.equals(message, "joke")) {
+                swingWindow.graphPanel.setJokeCount(swingWindow.graphPanel.getJokeCount() + 1);
+                swingWindow.graphPanel.setChartConfig();
                 jokeAPIRun("");//to be fleshed out later.
                 updateAPIRequestCounter();
                 sleep();
@@ -131,10 +135,14 @@ public class MyBot extends TelegramLongPollingBot {
                 this.userIDLevelHashMap.put(chatID, 0);
             }
             if (Objects.equals(message, "numbers")){
+                swingWindow.graphPanel.setNumbersCount(swingWindow.graphPanel.getNumbersCount() + 1);
+                swingWindow.graphPanel.setChartConfig();
                 sendMessage.setText("Pick a number you want a fact for");
                 this.userIDLevelHashMap.put(chatID, 2);
             }
             if (Objects.equals(message, "quote")){
+                swingWindow.graphPanel.setQuoteCount(swingWindow.graphPanel.getQuoteCount() + 1);
+                swingWindow.graphPanel.setChartConfig();
                 quotesAPIRun();
                 updateAPIRequestCounter();
                 sleep();
@@ -143,7 +151,8 @@ public class MyBot extends TelegramLongPollingBot {
                 this.userIDLevelHashMap.put(chatID, 0);
             }
             if (Objects.equals(message, "country")){
-                System.out.println(1);
+                swingWindow.graphPanel.setCountriesCount(swingWindow.graphPanel.getCountriesCount() + 1);
+                swingWindow.graphPanel.setChartConfig();
                 sendMessage.setText("Please message me a country code");
                 this.userIDLevelHashMap.put(chatID, 3);
             }
@@ -360,7 +369,7 @@ public class MyBot extends TelegramLongPollingBot {
     }
     public void sleep(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
