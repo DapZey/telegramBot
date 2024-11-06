@@ -1,0 +1,13 @@
+/* src/components/welcomeTitle.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.topCenteredText {
+    position: absolute;
+    top: 5%; /* Control vertical positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}

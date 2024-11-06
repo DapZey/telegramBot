@@ -1,0 +1,18 @@
+/* src/components/Logout.module.css */
+.logoutButton {
+    position: fixed; /* Use fixed positioning to keep it in the viewport */
+    top: 5%; /* Distance from the top */
+    left: 5%; /* Distance from the left */
+    padding: 5px 10px; /* Small padding for the button */
+    background-color: white; /* White background */
+    color: black; /* Black text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 0.9rem; /* Smaller font size */
+    width: 10%;
+}
+
+.logoutButton:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+}

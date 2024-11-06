@@ -1,0 +1,12 @@
+:root {
+    --bg-image-url: url('./assets/bg-gif.gif');
+}
+
+body {
+    background-image: var(--bg-image-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}

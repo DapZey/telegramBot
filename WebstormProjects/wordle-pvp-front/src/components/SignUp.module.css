@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Positioning context for absolute elements */
+}
+
+.loginContainer {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Fixed width */
+    text-align: center;
+    position: absolute; /* Allow absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half its width and height */
+    font-family: 'Roboto', sans-serif; /* Apply font */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Adjusted font size */
+}
+
+input {
+    width: 80%; /* Relative to container width */
+    padding: 10px; /* Padding for input */
+    margin: 10px 0; /* Vertical margin */
+    border: 1px solid #ccc; /* Input border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding for button */
+    margin: 10px 0; /* Vertical margin */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
